@@ -3,7 +3,7 @@ FROM php:8.4-fpm
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 
-WORKDIR /var/www/electronic
+WORKDIR /var/www/ida-dev
 
 RUN set -exv; \
     apt-get update && \
@@ -30,6 +30,6 @@ RUN apt install -y mc
 
 RUN git config --global user.email "after@ya.ru"
 RUN git config --global user.name "Maxim Gabidullin"
-RUN git config --global --add safe.directory /var/www/electronic
+RUN git config --global --add safe.directory /var/www/ida-dev
 
 CMD ["php-fpm"]

@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-final class IndexController extends AbstractController
+final class AuthController extends AbstractController
 {
-    #[Route('/', name: 'app_index')]
+    #[Route('/auth', name: 'app_auth')]
     public function index(): Response
     {
-        return $this->render('index/index.html.twig');
+        return $this->render('auth/index.html.twig');
     }
 }
